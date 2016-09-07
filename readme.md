@@ -27,5 +27,4 @@ The dashboard fetches data from the API on page load, then does so again every 6
 
 ## Author
 
-Luke Seemann
-September 6, 2016
+Luke Seemann / September 6, 2016
