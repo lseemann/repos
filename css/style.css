@@ -1,0 +1,163 @@
+body {
+  font-family : 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  background: #333;
+}
+
+#dashboard {
+  padding: 20px;
+  max-width: 900px;
+  padding: 20px;
+  background: #fafafa;
+  margin: 20px auto 100px;
+}
+
+/*=============================================================
+=            The primary panels for each repo            =
+=============================================================*/
+
+.repo {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.repo:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.repo h2 {
+  width: 100%;
+  text-transform: uppercase;
+  border-bottom: 4px solid #333;
+  margin: 10px 0 5px;
+}
+
+.datum-outer {
+  flex-grow: 1;
+  flex-basis: 50px;
+  margin-right: 10px;
+  text-align: center;
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+  padding: 15px;
+}
+
+.datum-outer:last-child {
+  margin-right: 0;
+}
+
+.datum-outer.highest {
+  border: 3px dashed red;
+}
+
+.datum {
+  font-size: 30px;
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+.datum-updated {
+    -webkit-animation: 3s ease-in 0s 1 target-fade;;
+    -moz-animation: 3s ease-in 0s 1 target-fade;;
+    animation: 3s ease-in 0s 1 target-fade;
+}
+
+@-webkit-keyframes target-fade {
+    0% { background-color: rgba(255,175,20,0); }
+    20% { background-color: rgba(255,175,20,.8); }
+    30% { background-color: rgba(255,175,20,.8); }
+    100% { background-color: rgba(255,175,20,0); }
+}
+@-moz-keyframes target-fade {
+    0% { background-color: rgba(255,175,20,0); }
+    20% { background-color: rgba(255,175,20,.8); }
+    30% { background-color: rgba(255,175,20,.8); }
+    100% { background-color: rgba(255,175,20,0); }
+}
+@keyframes target-fade {
+     0% { background-color: rgba(255,175,20,0); }
+    20% { background-color: rgba(255,175,20,.8); }
+    30% { background-color: rgba(255,175,20,.8); }
+    100% { background-color: rgba(255,175,20,0); }
+}
+
+.label {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/*=====  End of The primary panels for each repo  ======*/
+
+
+
+/*===================================
+=            D3 chartage            =
+===================================*/
+.repo h3 {
+  width: 100%;
+  margin: 5px 0 3px;
+}
+
+.repo .commit-chart {
+  height: 100px;
+  width: 100%;
+  overflow: visible;
+}
+
+rect.bar {
+  fill: #333333;
+}
+
+path {
+  stroke-width: 1px;
+  stroke: #aaa;
+  fill: none;
+}
+
+text {
+  font-size: 12px;
+  fill: #999;
+
+}
+
+
+/*=====  End of D3 chartage  ======*/
+
+
+/*======================================
+=            Ranking tables            =
+======================================*/
+
+.ranking-table {
+  margin-top: 40px;
+}
+
+.ranking-table h2 {
+  margin-bottom: 3px;
+}
+.ranking-top {
+  font-weight: 700;
+}
+
+.ranking-row {
+  display: flex;
+}
+.ranking-name {
+  width: 80px;
+  flex-grow: 0;
+}
+.ranking-datum {
+  width: 75px;
+  flex-grow: 0;
+}
+.ranking-bar-outer {
+  flex-grow: 1;
+}
+.ranking-bar {
+  height: 15px;
+  background: #333;
+}
+
+
+/*=====  End of Ranking tables  ======*/
