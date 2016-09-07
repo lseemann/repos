@@ -74,9 +74,6 @@ class Dashboard {
     let max_week = 0;
     repos.forEach(repo => {
       let this_max = Math.max.apply(Math,repo.commit_log.map(function(o){return o.total;}));
-      console.log(repo.name)
-      console.log(repo.commit_log)
-      console.log(repo.commit_log.map(function(o){return o.total;}))
       max_week = this_max > max_week ? this_max : max_week;
     })
 

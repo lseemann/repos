@@ -153,7 +153,7 @@
 	      }).then(function (json) {
 	        return _this.data.closed_issues.value = json.total_count;
 	      }).then(function () {
-	        return callback();
+	        if (typeof callback === 'function') callback();
 	      });
 	    }
 	  }], [{
@@ -786,11 +786,6 @@
 	      var max_week = 0;
 	      repos.forEach(function (repo) {
 	        var this_max = Math.max.apply(Math, repo.commit_log.map(function (o) {
-	          return o.total;
-	        }));
-	        console.log(repo.name);
-	        console.log(repo.commit_log);
-	        console.log(repo.commit_log.map(function (o) {
 	          return o.total;
 	        }));
 	        max_week = this_max > max_week ? this_max : max_week;

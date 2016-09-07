@@ -28,7 +28,7 @@ class Repo {
         .then(json => {this.data.forks.value = json.forks_count})
       .then(() => Repo.getRecentlyClosedIssues(this.owner, this.repo))
         .then(json => this.data.closed_issues.value = json.total_count)
-      .then(() => callback())
+      .then(() => {if (typeof callback === 'function') callback()})
   }
 
   static getCommits(owner, repo) {
